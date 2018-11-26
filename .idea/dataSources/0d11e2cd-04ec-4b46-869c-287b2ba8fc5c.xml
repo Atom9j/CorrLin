@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="DerbyT">
+  <database-model serializer="dbm" rdbms="DERBY" format-version="4.9">
+    <root id="1">
+      <ServerVersion>10.14</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="APP">
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="NULLID"/>
+    <schema id="4" parent="1" name="PRO_USER">
+      <Current>1</Current>
+    </schema>
+    <schema id="5" parent="1" name="SQLJ"/>
+    <schema id="6" parent="1" name="SYS"/>
+    <schema id="7" parent="1" name="SYSCAT"/>
+    <schema id="8" parent="1" name="SYSCS_DIAG"/>
+    <schema id="9" parent="1" name="SYSCS_UTIL"/>
+    <schema id="10" parent="1" name="SYSFUN"/>
+    <schema id="11" parent="1" name="SYSIBM"/>
+    <schema id="12" parent="1" name="SYSPROC"/>
+    <schema id="13" parent="1" name="SYSSTAT"/>
+    <table id="14" parent="2" name="AUTHORITIES"/>
+    <table id="15" parent="2" name="SERVER"/>
+    <table id="16" parent="2" name="SERVER_2_STEND"/>
+    <table id="17" parent="2" name="STENDS"/>
+    <table id="18" parent="2" name="USERS"/>
+    <column id="19" parent="14" name="USER_ID">
+      <Position>1</Position>
+      <DataType>VARCHAR(36)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="14" name="AUTHORITY">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="21" parent="15" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="15" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="23" parent="15" name="STATE">
+      <Position>3</Position>
+      <DataType>VARCHAR(16)|12s</DataType>
+    </column>
+    <column id="24" parent="15" name="PROTOCOL">
+      <Position>4</Position>
+      <DataType>VARCHAR(16)|12s</DataType>
+    </column>
+    <column id="25" parent="15" name="ADRESS">
+      <Position>5</Position>
+      <DataType>VARCHAR(64)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="15" name="PORT">
+      <Position>6</Position>
+      <DataType>INTEGER|4s</DataType>
+    </column>
+    <column id="27" parent="15" name="USER_NAME">
+      <Position>7</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="28" parent="15" name="PASSWORD">
+      <Position>8</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <index id="29" parent="15" name="SQL181119044306090">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="30" parent="15" name="SQL181119044306090">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="31" parent="16" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="16" name="SERVER_ID">
+      <Position>2</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="16" name="STEND_ID">
+      <Position>3</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="34" parent="16" name="SERVER_2_STEND_ID_UINDEX">
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="35" parent="16" name="SERVER_2_STEND_ID_UINDEX">
+      <ColNames>ID</ColNames>
+    </key>
+    <column id="36" parent="17" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>AUTOINCREMENT: start 1 increment 1</DefaultExpression>
+    </column>
+    <column id="37" parent="17" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12s</DataType>
+    </column>
+    <column id="38" parent="17" name="STATE">
+      <Position>3</Position>
+      <DataType>VARCHAR(16)|12s</DataType>
+    </column>
+    <column id="39" parent="17" name="SERVER_PATH">
+      <Position>4</Position>
+      <DataType>LONG VARCHAR|-1s</DataType>
+    </column>
+    <column id="40" parent="17" name="STEND_LINK">
+      <Position>5</Position>
+      <DataType>LONG VARCHAR|-1s</DataType>
+    </column>
+    <index id="41" parent="17" name="SQL181119025506700">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="42" parent="17" name="SQL181119025506700">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="43" parent="18" name="ID">
+      <Position>1</Position>
+      <DataType>VARCHAR(36)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="18" name="USERNAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(36)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="18" name="PASSWORD">
+      <Position>3</Position>
+      <DataType>VARCHAR(36)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="18" name="EMAIL">
+      <Position>4</Position>
+      <DataType>VARCHAR(64)|12s</DataType>
+    </column>
+    <column id="47" parent="18" name="ENABLED">
+      <Position>5</Position>
+      <DataType>BOOLEAN|16s</DataType>
+    </column>
+    <index id="48" parent="18" name="SQL181119055947780">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="49" parent="18" name="USERS_USERNAME_UINDEX">
+      <ColNames>USERNAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="50" parent="18" name="SQL181119055947780">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="51" parent="18" name="USERS_USERNAME_UINDEX">
+      <ColNames>USERNAME</ColNames>
+    </key>
+  </database-model>
+</dataSource>
